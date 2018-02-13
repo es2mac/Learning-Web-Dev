@@ -1,0 +1,38 @@
+li {
+    border: 2px solid red;
+}
+
+#special {
+    border: solid blue;
+    background-color: yellow;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Select everything */
+* {
+    border: 1px solid lightgray;
+}
+
+/* Descendant: target the a's after li */
+li a {
+}
+
+/* Adjacent: target the ul's after an h4 */
+h4 + ul {
+}
+
+/* Attribute: Every a tag with href to google, every checkbox */
+a[href="http://www.google.com"] {
+}
+
+input[type="checkbox"] {
+}
+
+/* nth of type: only the third ul */
+ul:nth-of-type(3) {
+}
+
+

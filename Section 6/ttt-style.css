@@ -1,0 +1,45 @@
+
+h1 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border-spacing: 0;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+}
+
+td:nth-of-type(2) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+tr:nth-of-type(2) td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+/*
+td {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+}
+
+td:nth-of-type(3) {
+    border-right: none;
+}
+
+tr:nth-of-type(3) td {
+    border-bottom: none;
+}
+*/
+

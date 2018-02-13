@@ -1,0 +1,29 @@
+h1 {
+    color: rgb(0, 50, 200);
+    border: 8px solid purple;
+    /* The long-form would be:
+    border-color: purple;
+    border-width: 5px;
+    border-style: solid;
+    */
+}
+h2 {
+    color: rgba(0, 50, 200, .5);
+}
+h3 {
+    color: #FF1493;
+    background: rgb(0, 255, 0);
+}
+li {
+    color: skyblue;
+}
+
+body {
+	background: pink;
+    /*
+    background: url(http://www.textures.com/system/gallery/photos/Fabric/Wicker/38164/Wicker0011_1_600.jpg?v=5);
+    background-repeat: repeat-y;
+    background-size: cover;
+    */
+}
+
