@@ -22,3 +22,8 @@ while (input !== "quit") {
 }
 
 console.log("OK, bye!");
+
+
+// Note: There's more to this exercise, but I've skipped them
+
+
