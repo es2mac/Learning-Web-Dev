@@ -3,39 +3,43 @@ let numberOfColors = 6;
 let colors;
 let pickedColor;
 
+const defaultNumberOfColors = {
+    "Easy" : 3,
+    "Hard" : 6
+};
+
 const squares = document.querySelectorAll(".square");
 const colorDisplay = document.getElementById("colorDisplay");
 const messageDisplay = document.querySelector("#message");
 const h1 = document.querySelector("h1");
 const resetButton = document.querySelector("#reset");
-const easyButton = document.querySelector("#easyButton");
-const hardButton = document.querySelector("#hardButton");
+const modeButtons = document.querySelectorAll(".mode");
 
-reset();
+init();
 
-resetButton.addEventListener("click", reset);
+function init() {
+    resetButton.addEventListener("click", reset);
 
-easyButton.addEventListener("click", function() {
-    easyButton.classList.add("selected");
-    hardButton.classList.remove("selected");
-    numberOfColors = 3;
+    for (const button of modeButtons) {
+        button.addEventListener("click", function() {
+            document.querySelectorAll("button.mode.selected").forEach((button) =>
+            {button.classList.remove("selected")});
+            this.classList.add("selected");
+            numberOfColors = defaultNumberOfColors[this.textContent] || 6;
+            reset();
+        })
+    }
+
+    for (let i = 0; i < squares.length; i++) {
+        squares[i].addEventListener("click", checkCorrectness);
+    }
     reset();
-});
-hardButton.addEventListener("click", function() {
-    hardButton.classList.add("selected");
-    easyButton.classList.remove("selected");
-    numberOfColors = 6;
-    reset();
-});
-
-for (let i = 0; i < squares.length; i++) {
-    squares[i].addEventListener("click", checkCorrectness);
 }
 
 function reset() {
     colors = generateRandomColors(numberOfColors);
     pickedColor = pickColor();
-    colorDisplay.textContent = pickedColor.toUpperCase();
+    colorDisplay.textContent = pickedColor;
     messageDisplay.textContent = "";
     resetButton.textContent = "New Colors";
     h1.style.backgroundColor = "";
