@@ -18,14 +18,8 @@ function setup() {
         }
     });
 
-    plusButton.addEventListener("click", () => {
+    plusButton.addEventListener("click", function() {
         textInput.classList.toggle("hidden");
-    });
-
-    textInput.addEventListener("transitionend", function() {
-        let isHidden = this.classList.contains("hidden");
-        this.style.display = isHidden ? "none" : "block";
-        console.log(isHidden);
     });
 }
 
@@ -47,10 +41,6 @@ function fadeAndRemove(liElement) {
     liElement.addEventListener("transitionend", function() {
         this.remove();
     });
-}
-
-function toggleInput(event) {
-    textInput.classList.toggle("hidden");
 }
 
 function addItem(item) {
