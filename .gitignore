@@ -2,4 +2,6 @@
 *.swp
 *.idea
 jquery-*.js
+node_modules/
+package-lock.json
 
