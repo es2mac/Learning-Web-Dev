@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First React Component</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+<body>
+
+<h1>Hello React!</h1>
+
+<div id="app"></div>
+
+<script type="text/javascript">
+    class Pet extends React.Component {
+        render() {
+            const h2 = React.createElement("h2", null, "Moxie");
+            const img = React.createElement("img", {
+                src: "https://raw.githubusercontent.com/tigarcia/Moxie/master/moxie.png",
+                alt:"moxie"
+            });
+            return React.createElement("div", null, h2, img);
+        }
+    }
+
+    ReactDOM.render(React.createElement(Pet), document.getElementById("app"));
+
+</script>
+
+</body>
+</html>
